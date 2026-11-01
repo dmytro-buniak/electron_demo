@@ -14,7 +14,7 @@ Built with Electron, SQLite and plain JavaScript.
 
 <br>
 
-<img src="docs/screenshot-main.png" alt="Lesson Roster main window" width="85%">
+<img src="https://github.com/user-attachments/assets/fea9fcfa-f363-42e9-811f-53fd9ddb64cf" alt="Lesson Roster main window" width="85%">
 
 </div>
 
@@ -41,7 +41,7 @@ The interface never touches the database directly. It talks to the main process 
 ```mermaid
 flowchart LR
     UI["Renderer<br/>HTML, CSS, JavaScript"] -- "window.api" --> BR["Preload bridge"]
-    BR -- IPC --> MAIN["Main process<br/>Electron"]
+    BR -- IPC --> MAIN["Main process<br/>main.js and db.js"]
     MAIN -- SQL --> DB[("SQLite")]
 ```
 
@@ -52,7 +52,7 @@ The bridge exposes a few calls such as `getStudents`, `addStudent`, `addLesson`,
 - **Electron** for the desktop shell
 - **SQLite** (`better-sqlite3`) for storage
 - **Vanilla JavaScript**, with async/await for all database calls
-- **HTML5 and CSS3**, with the styles split by purpose (variables, blocks, buttons)
+- **HTML5 and CSS3**, with the styles split by purpose: layout, buttons and cards, calendar, theme
 
 ## 🚀 Getting started
 
@@ -73,12 +73,22 @@ The first launch creates a fresh database and fills it with **demo students**. T
 
 ```
 .
-├── main.js          # Electron main process, database access
-├── preload.js       # the window.api bridge
-├── renderer.js      # UI logic: cards, search, popups, calendar
-├── index.html
-├── css/             # variables, blocks, buttons
-└── docs/            # screenshots
+├── scripts/
+│   ├── main.js        # Electron main process
+│   ├── db.js          # SQLite setup and queries
+│   ├── preload.js     # the window.api bridge
+│   └── renderer.js    # UI logic: cards, search, popups, calendar
+├── src/
+│   └── index.html     # app window
+├── style/
+│   ├── base_containers.css   # layout containers
+│   ├── buttons_cards.css     # buttons and student cards
+│   ├── calendar.css          # calendar grid and popups
+│   ├── minimal_green.css     # colour theme
+│   └── scroll_bar.css        # custom scrollbar
+├── docs/              # screenshots
+├── package.json
+└── README.md
 ```
 
 <!-- Adjust the file names to match your repo. -->
@@ -95,9 +105,6 @@ The first launch creates a fresh database and fills it with **demo students**. T
 
 I built Lesson Roster to learn how a desktop app fits together: a real database, a safe bridge between the interface and the data, and a UI written without a framework. This public edition uses demo data only. I'm still working on it, and the calendar is the next feature.
 
-## 📄 License
-
-MIT. See [LICENSE](LICENSE). <!-- Add a LICENSE file, or remove this section. -->
 
 ---
 
