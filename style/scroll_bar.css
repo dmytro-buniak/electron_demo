@@ -1,0 +1,21 @@
+@import "minimal_green.css";
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-sidebar_navigation-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var( --secondary-text_labes-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var( --active-main-action-btn-color);
+}

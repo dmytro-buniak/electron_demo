@@ -1,0 +1,160 @@
+@import "minimal_green.css";
+
+
+.title-bar {
+    /*--- w, h and display, and position ---*/
+    width: 100vw;
+    height: 3vh;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    /*--- background color, borders ---*/
+    background-color: transparent;
+    border: none;
+    /*--- margins and padding ---*/
+    padding: 8px;
+    margin: 0;
+    /*--- grab and drag ---*/
+    -webkit-app-region: drag;
+}
+
+html,
+body {
+    /*--- margins, padding, height, display ---*/
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    /*--- background color, borders ---*/
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+/*--- MAIN CONTAINER ---*/
+.main-container {
+    /*--- w, h and display ---*/
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    /*--- overflow ---*/
+    overflow: hidden;
+    /*--- margins, padding and borders ---*/
+    margin: 0;
+    padding: 0;
+    border-radius: 9px;
+    -electron-conrner-smoothing: system-ui;
+    /*--- background ---*/
+    background-color: transparent;
+}
+
+.search_student_list_wrapper {
+    display: block;
+}
+
+.content-area-wrapper {
+    /*--- w, h, display ---*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /*--- background ---*/
+    background-color: var(--primary-bg-color);
+    /*--- margins, padding ---*/
+    padding-top: 70px;
+}
+
+/*--- SIDE BAR ---*/
+.side-bar-container {
+    /*--- w, h, display, shrink ---*/
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    /*--- padding, margins ---*/
+    padding: 0;
+}
+
+.nav-btn-container {
+    display: block;
+    align-items: center;
+    padding: 0;
+}
+
+/*--- MID COLUMN - STUDENT LIST ---*/
+
+.student-list-container-home {
+    /*--- display&position ---*/
+    display: inline-block;
+    /*--- w, h, padding, margins ---*/
+    min-width: 375px;
+    height: 70vh;
+    padding: 0 12px 12px 12px;
+    /*--- overflow ---*/
+    overflow-x: hidden;
+}
+
+.search-container {
+    /*--- display&position ---*/
+    display: fixed;
+    /*--- w, h, padding, margins ---*/
+    width: 385px;
+    height: 50px;
+
+    margin: 4px 24px 12px 32px;
+}
+
+.search-bar-wrap {
+    /*--- display&position ---*/
+    display: flex;
+}
+
+.search-result-container {
+    /*--- display&position ---*/
+    display: flex;
+    z-index: 20;
+    overflow-y: auto;
+    justify-content: center;
+    /*--- w, h, padding, margins ---*/
+    width: 385px;
+    min-height: 50px;
+    max-height: 300px;
+    margin: 4px 12px 12px 12px;
+    /*--- borders, background ---*/
+    border-radius: 16px;
+}
+
+/*--- RIGHT-HAND COLUMN ---*/
+.right-hand-container {
+    /*--- display&position ---*/
+    display: inline-block;
+    /*--- w, h, padding, margins ---*/
+    min-width: 375px;
+    padding: 0 12px 12px 12px;
+    /*--- overflow ---*/
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.schedule-preview-container {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+}
+
+.next-lesson-container-hidden {
+    display: hidden;
+    width: 100%;
+    padding: 8px;
+    margin: 12px;
+}
+
+.next-lesson-container-visible {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    margin: 12px;
+}
+
+#nextLessonPara {
+    padding: 8px;
+}
+

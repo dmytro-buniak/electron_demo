@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_demo",
+  "version": "0.1.0",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.2.0",
+    "electron": "44.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true
+  }
+}

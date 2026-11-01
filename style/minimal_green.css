@@ -1,0 +1,21 @@
+:root {
+    --primary-bg-color: #051F20;
+    --primary-sidebar_navigation-color: #0B2B26;
+    --cards_layout-widgets-color: #163832;
+    --borders_focus-state_grid-divider-color: #235347;
+    --secondary-text_labes-color: #8EB69B;
+    --primary-text_main-action-btn-color: #DAF1DE;
+    --hover-main-action-btn-color: #e6ffea;
+    --active-main-action-btn-color: #bacfbe;
+
+    /*---GLASSMORPHISM ---*/
+    --glass-blur: blur(12.3px);
+    --glass-border: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(122, 150, 168, 0.4));
+    --glass-shadow: 0 8px 32px 0 rgba(11, 34, 56, 0.12);
+    --glass-bg: rgba(22, 56, 50, 0.4);
+    --glass-btn-bg: rgba(218,241,222, 0.95);
+    --glass-side-bar: rgba(11,43,38, 0.99);
+    --glass-seacr-bar: rgba(255, 255, 255, 0.8);
+    --spingTransitionWidth: width 1s cubic-bezier(0.68, -0.35, 0.27, 1.2);
+    --spingTransitionHeight: height 1s cubic-bezier(0.68, -0.35, 0.27, 1.2);
+}
