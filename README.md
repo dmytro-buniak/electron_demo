@@ -14,7 +14,7 @@ Built with Electron, SQLite and plain JavaScript.
 
 <br>
 
-<img src="https://github.com/user-attachments/assets/fea9fcfa-f363-42e9-811f-53fd9ddb64cf" alt="Lesson Roster main window" width="85%">
+<img src="https://github.com/user-attachments/assets/f5f05877-1983-4226-8018-a58a117f2307" alt="Lesson Roster main window" width="85%">
 
 </div>
 
