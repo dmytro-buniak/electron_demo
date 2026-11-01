@@ -2,7 +2,7 @@ const path = require('node:path');
 const { app } = require('electron');
 const Database = require('better-sqlite3');
 
-const dbPath = path.join(app.getPath('C:\Users\dmitr\Documents\electron_apps\portfolio_demo\database'), 'database.db');
+const dbPath = path.join(app.getPath('documents'), 'database.db');
 const db = new Database(dbPath);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON'); // for ON DELETE CASCADE to actually work
